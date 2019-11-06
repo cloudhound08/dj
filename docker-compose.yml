@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+
+  pg_dj:
+    container_name: "pg_dj"
+    image: "postgres:12"
+    ports:
+      - "8001:5432"
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Dhannu_08_Junnu
+      POSTGRES_DB: postgres
+
+  mssql_dj:
+    container_name: "mssql_dj"
+    image: "mcr.microsoft.com/mssql/server"
+    ports:
+      - "8002:1433"
+    environment:
+      SA_PASSWORD: "Dhannu_08_Junnu"
+      ACCEPT_EULA: "Y"
